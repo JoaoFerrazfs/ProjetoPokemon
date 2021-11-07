@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Jenssegers\Mongodb\Eloquent\Model;
 use Illuminate\Support\Facades\Http;
-
+use app\Models\Trainer;
 use Illuminate\Http\Request;
 
 class PokemonController extends Controller

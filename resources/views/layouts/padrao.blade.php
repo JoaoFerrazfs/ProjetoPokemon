@@ -13,6 +13,8 @@
        
         <!-- Styles -->
         <link rel="stylesheet" href="/css/styles.css">
+
+
     </head>
 
     <body>
@@ -29,7 +31,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Os mais populares</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Cadastra-se</a>
+                    <a class="nav-link" href="/register">Cadastra-se</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Objetivo</a>
@@ -42,6 +44,17 @@
             
           </nav>
           
-          @yield('content')
+          <main>
+            <div class="container-fluid"> 
+              <div class="row">
+                @if (session('msg'))
+                <h2 class="msg">{{session('msg')}}</h2>
+                @endif
+                @yield('content')
+
+              </div>
+
+            </div>
+          </main>
     </body>
 </html>
